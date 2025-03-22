@@ -33,7 +33,9 @@
 
 /* _____________ 你的代码 _____________ */
 
-type MyReadonly<T> = any
+type MyReadonly<T extends Record<string, any>> = {
+  +readonly [Key in keyof T]: T[Key]
+}
 
 /* _____________ 测试用例 _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'
