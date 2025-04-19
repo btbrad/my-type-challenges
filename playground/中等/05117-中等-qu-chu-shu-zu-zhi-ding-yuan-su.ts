@@ -19,8 +19,8 @@
 */
 
 /* _____________ 你的代码 _____________ */
-
-type Without<T, U> = any
+type ToUnion<T> = T extends unknown[] ? T[number] : T
+type Without<T, U> = T extends [infer F, ...infer R] ? F extends ToUnion<U> ? Without<R, U> : [F, ...Without<R, U>] : T
 
 /* _____________ 测试用例 _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'
