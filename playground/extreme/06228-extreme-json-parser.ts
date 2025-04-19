@@ -1,7 +1,7 @@
 /*
   6228 - JSON Parser
   -------
-  by Hydration (@hydrati) #地狱 #template-literal #json
+  by Hydration (@hydrati) #地狱 #template-literal #JSON
 
   ### 题目
 

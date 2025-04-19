@@ -1,7 +1,7 @@
 /*
   25747 - IsNegativeNumber
   -------
-  by andrew jarrett (@ahrjarrett) #困难 #number #template literal
+  by andrew jarrett (@ahrjarrett) #困难 #number #template-literal
 
   ### 题目
 
