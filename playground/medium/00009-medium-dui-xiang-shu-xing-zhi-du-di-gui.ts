@@ -36,7 +36,9 @@
 
 /* _____________ 你的代码 _____________ */
 
-type DeepReadonly<T> = any
+type DeepReadonly<T extends object> = {
+  +readonly [Key in keyof T]: T[Key] extends object ? T[Key] extends Function ? T[Key] : DeepReadonly<T[Key]> : T[Key]
+}
 
 /* _____________ 测试用例 _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'
