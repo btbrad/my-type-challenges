@@ -18,7 +18,7 @@
 
 /* _____________ 你的代码 _____________ */
 
-type MyCapitalize<S extends string> = any
+type MyCapitalize<S extends string> = S extends `${infer First}${infer Rest}` ? `${Uppercase<First>}${Rest}` : S
 
 /* _____________ 测试用例 _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'
