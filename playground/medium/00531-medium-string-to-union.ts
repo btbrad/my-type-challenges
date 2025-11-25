@@ -19,7 +19,7 @@
 
 /* _____________ 你的代码 _____________ */
 
-type StringToUnion<T extends string> = any
+type StringToUnion<T extends string> = T extends `${infer Str}${infer Rest}` ? Str | StringToUnion<Rest> : never
 
 /* _____________ 测试用例 _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'
